@@ -1,0 +1,33 @@
+[project]
+name = "data-analysis"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=7.3.0",
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.3",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.7",
+]
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "SIM", "A"]
+
+ignore = ["E501"]
+
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+skip-magic-trailing-comma = false
